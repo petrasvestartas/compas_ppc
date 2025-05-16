@@ -77,6 +77,11 @@ endfunction()
 # Create individual extension modules for each C++ file
 # Copy this line with new file name and module name
 add_nanobind_extension(_primitives src/primitives.cpp)
+add_nanobind_extension(_vectors_copy src/vectors_copy.cpp)
+add_nanobind_extension(_vectors_reference src/vectors_reference.cpp)
+add_nanobind_extension(_class_primitives src/class_primitives.cpp)
+add_nanobind_extension(_class_unique_pointer src/class_unique_pointer.cpp)
+add_nanobind_extension(_class_shared_pointer src/class_shared_pointer.cpp)
 
 message(STATUS "============= Build Configuration =============")
 message(STATUS "Build Type: ${CMAKE_BUILD_TYPE}")
